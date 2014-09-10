@@ -1,0 +1,100 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | {{ project_caption }}{% endblock %}
+
+{% block branding %}
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700' rel='stylesheet'
+          type='text/css'>
+    <link href="/static/css/kendo.common.css" type="text/css" rel='stylesheet'/>
+    <link href="/static/css/kendo.metro.min.css" type="text/css" rel='stylesheet'/>
+    <link href="/static/css/cuescience.css" type="text/css" rel='stylesheet'/>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/kendo.all.js"></script>
+    <style>
+        * {
+            font-family: "Source Sans Pro" sans-serif !important;
+
+        }
+
+
+        input {
+            font-size: 0.7rem !important;
+        }
+        input[type="submit"][name="_save"]{
+           background: rgb({{ project_color.0 }}, {{ project_color.1 }}, {{ project_color.2 }}) !important;
+            border-color:  rgb({{ project_color.0 }}, {{ project_color.1 }}, {{ project_color.2 }}) !important;
+        }
+        input[type="submit"][name="_save"]:hover{
+           background: rgb({{ project_highlight_color.0 }}, {{ project_highlight_color.1 }}, {{ project_highlight_color.2 }}) !important;
+            border-color: rgb({{ project_highlight_color.0 }}, {{ project_highlight_color.1 }}, {{ project_highlight_color.2 }}) !important;
+        }
+
+        input[type="submit"] {
+            background: white !important;
+            border:1px solid #afafaf !important;
+
+        }
+
+        input[type="submit"]:hover {
+            background: white !important;
+            border:1px solid #818181 !important;
+
+        }
+
+        .errorlist li {
+            background: #c0392b !important;
+            color: white !important;
+            padding: 5px !important;
+            margin: 0 !important;
+            margin-top: 2px !important;
+            margin-bottom: 2px !important;
+            border: 0 !important;
+
+        }
+
+        .errorlist+ input {
+            border: 2px solid #c0392b;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        #header {
+            background-color: rgb({{ project_color.0 }}, {{ project_color.1 }}, {{ project_color.2 }}) !important;
+        }
+
+        #header h1 {
+            color: white;
+            font-family: "Source Sans Pro" sans-serif;
+            font-weight: 200;
+            font-size: 1.2rem;
+        }
+
+        #content h1 {
+            color: black;
+            font-family: "Source Sans Pro" sans-serif;
+            font-weight: 200;
+        }
+
+        a:link{
+            font-weight: normal;
+        }
+        .module caption {
+            background: rgb({{ project_color.0 }}, {{ project_color.1 }}, {{ project_color.2 }}) !important;
+            font: "source sans pro";
+            font-weight: normal;
+            padding: 5px;
+        }
+
+    fieldset h2{
+        color: white !important;
+         background: rgb({{ project_color.0 }}, {{ project_color.1 }}, {{ project_color.2 }}) !important;
+    }
+    </style>
+
+    <h1 id="site-name">{{ project_caption }} {{ project_version }}</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
