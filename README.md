@@ -1,7 +1,7 @@
 # cuescience-design
 
 ## Installation
-1. Add -e git+https://github.com/cuescience/cuescience-design to the requirements.txt
+1. Add git+https://github.com/cuescience/cuescience-design#egg=cuescience-design to the requirements.txt
 2. 'cuescience_design' to installed apps _above_ the django admin.
 2. Add "cuescience_design.processor.admin_caption" to your TEMPLATE_CONTEXT_PROCESSORS
 3. Add the following constants to your settings.py:
