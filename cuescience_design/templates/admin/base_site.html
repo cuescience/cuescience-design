@@ -87,11 +87,18 @@
             font-weight: normal;
             padding: 5px;
         }
+        .button.default, input[type=submit].default, .submit-row input.default {
+            background: rgb({{ project_color.0 }}, {{ project_color.1 }}, {{ project_color.2 }}) !important;
+            border-color:  rgb({{ project_color.0 }}, {{ project_color.1 }}, {{ project_color.2 }}) !important;
+            color: white;
+            float: right;
+}
 
     fieldset h2{
         color: white !important;
          background: rgb({{ project_color.0 }}, {{ project_color.1 }}, {{ project_color.2 }}) !important;
     }
+
     </style>
 
     <h1 id="site-name">{{ project_caption }} {{ project_version }}</h1>
