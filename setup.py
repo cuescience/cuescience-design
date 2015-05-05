@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name='cuescience-design',
-    version='0.1.1',
+    version='0.1.2',
     description='New Admin Design for cuescience projects',
     maintainer='cuescience',
     maintainer_email='kontakt@cuescience.de',
